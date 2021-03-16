@@ -25,8 +25,10 @@ branch.setBranchViewData(linkData);
             
     
 function sendSMS(form){
-  branch.sendSMS(
-    phone: form."phone".value;
+    let phonenumber=form.phone.val();
+    console.log(phonenumber);
+    branch.sendSMS(
+    phonenumber,
     {
       channel: 'Website',
       feature: 'Text-Me-The-App',
